@@ -52,3 +52,35 @@
 	path = sources/saitoomituru/SphereASTRO
 	url = https://github.com/saitoomituru/SphereASTRO.git
 	shallow = true
+[submodule "sources/saitoomituru/commonsATX"]
+	path = sources/saitoomituru/commonsATX
+	url = https://github.com/saitoomituru/commonsATX.git
+	shallow = true
+[submodule "sources/HIPSTAR-IScompany/astro.quantaril.cloud"]
+	path = sources/HIPSTAR-IScompany/astro.quantaril.cloud
+	url = https://github.com/HIPSTAR-IScompany/astro.quantaril.cloud.git
+	shallow = true
+[submodule "sources/saitoomituru/pain-scouter-assessment"]
+	path = sources/saitoomituru/pain-scouter-assessment
+	url = https://github.com/saitoomituru/pain-scouter-assessment.git
+	shallow = true
+[submodule "sources/saitoomituru/OpenSourcePITETO"]
+	path = sources/saitoomituru/OpenSourcePITETO
+	url = https://github.com/saitoomituru/OpenSourcePITETO.git
+	shallow = true
+[submodule "sources/HIPSTAR-IScompany/FMS24GTP_driver"]
+	path = sources/HIPSTAR-IScompany/FMS24GTP_driver
+	url = https://github.com/HIPSTAR-IScompany/FMS24GTP_driver.git
+	shallow = true
+[submodule "sources/saitoomituru/saitoomituru"]
+	path = sources/saitoomituru/saitoomituru
+	url = https://github.com/saitoomituru/saitoomituru.git
+	shallow = true
+[submodule "sources/saitoomituru/KUMA800"]
+	path = sources/saitoomituru/KUMA800
+	url = https://github.com/saitoomituru/KUMA800.git
+	shallow = true
+[submodule "sources/HIPSTAR-IScompany/SphereOS-synthesizer"]
+	path = sources/HIPSTAR-IScompany/SphereOS-synthesizer
+	url = https://github.com/HIPSTAR-IScompany/SphereOS-synthesizer.git
+	shallow = true

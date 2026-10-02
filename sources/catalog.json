@@ -1,0 +1,631 @@
+{
+  "schema_version": "1.0.0",
+  "observed_on": "2026-10-03",
+  "purpose": "Zenn向けの公開記事素材を固定revisionで配置する静的台帳。自動収集・分類ルールではない。",
+  "discovery": {
+    "manifest_revision": "e5fc0be592d7216b2e7bd059a4518db73a2a118e",
+    "issues_checked": 39,
+    "comments_checked": 90,
+    "milestones_checked": 1,
+    "milestone_url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/milestone/1"
+  },
+  "repositories": [
+    {
+      "name": "saitoomituru/FQuery",
+      "path": "sources/saitoomituru/FQuery",
+      "url": "https://github.com/saitoomituru/FQuery.git",
+      "branch": "main",
+      "revision": "95b0eab17c7dbc32f6e2441fc1722a5431a20a40",
+      "discovered_from": [
+        {
+          "kind": "user-request",
+          "date": "2026-10-03"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/README.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/theory/fam-overview.ja.md"
+        },
+        {
+          "kind": "manifest-issue-comment",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/issues/44#issuecomment-5560026822"
+        },
+        {
+          "kind": "manifest-issue-comment",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/issues/41#issuecomment-5560026837"
+        },
+        {
+          "kind": "manifest-issue-comment",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/issues/41#issuecomment-5574516235"
+        }
+      ],
+      "license_entry_files": [
+        "LICENSE",
+        "README.md"
+      ],
+      "license_rule": "source-side-notices-retained"
+    },
+    {
+      "name": "saitoomituru/Sphere-aae",
+      "path": "sources/saitoomituru/Sphere-aae",
+      "url": "https://github.com/saitoomituru/Sphere-aae.git",
+      "branch": "main",
+      "revision": "f67fa20df0ad23980e9b7f2cfa4deea6e6ecff60",
+      "discovered_from": [
+        {
+          "kind": "user-request",
+          "date": "2026-10-03"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/README.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/note/20260207-1643__sphere_astro_readme.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/note/narrative/doraemon-order-article-draft1.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/theory/ibd-fam-native-binder.ja.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/projects/astro-aae-development-milestones.ja.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/operations/workspace-registry.json"
+        }
+      ],
+      "license_entry_files": [
+        "LICENSE",
+        "NOTICE",
+        "README.md"
+      ],
+      "license_rule": "source-side-notices-retained"
+    },
+    {
+      "name": "saitoomituru/OpenRVC",
+      "path": "sources/saitoomituru/OpenRVC",
+      "url": "https://github.com/saitoomituru/OpenRVC.git",
+      "branch": "main",
+      "revision": "865b337ca2144feb49d605903f1017ffb2d01fb3",
+      "discovered_from": [
+        {
+          "kind": "user-request",
+          "date": "2026-10-03"
+        }
+      ],
+      "license_entry_files": [
+        "LICENSE",
+        "README.md"
+      ],
+      "license_rule": "source-side-notices-retained"
+    },
+    {
+      "name": "saitoomituru/OND800",
+      "path": "sources/saitoomituru/OND800",
+      "url": "https://github.com/saitoomituru/OND800.git",
+      "branch": "main",
+      "revision": "553ed3965c201814c8edd48fc3af818be44a1d9b",
+      "discovered_from": [
+        {
+          "kind": "user-request",
+          "date": "2026-10-03"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/projects/ond800-pi5-setup.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/projects/dve800.ja.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/operations/workspace-registry.json"
+        },
+        {
+          "kind": "manifest-issue-comment",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/issues/12#issuecomment-5212159333"
+        }
+      ],
+      "license_entry_files": [
+        "LICENSE",
+        "README.md"
+      ],
+      "license_rule": "source-side-notices-retained"
+    },
+    {
+      "name": "HIPSTAR-IScompany/quantaril_cloud_QAtlantis",
+      "path": "sources/HIPSTAR-IScompany/quantaril_cloud_QAtlantis",
+      "url": "https://github.com/HIPSTAR-IScompany/quantaril_cloud_QAtlantis.git",
+      "branch": "main",
+      "revision": "39a67f2ed68c3cf826493c7f97462c1552c943dc",
+      "discovered_from": [
+        {
+          "kind": "user-request",
+          "date": "2026-10-03"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/README.ja.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/note/20260819-2212__SphereDOS_Fold7G_Fold8G_registry_upgrade_memo.ja.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/note/20260721-1300__Fold意味深度ずれ事故_歌唱採点と高性能AIハルシネーション.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/theory/quantaril-cloud.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/theory/quantaril-cloud.ja.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/network/fold8g-emergency-migration-mission.ja.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/operations/workspace-registry.json"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/operations/sakura-incident-2026-08-31.ja.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/preservation/quantaril-domain-status.ja.md"
+        },
+        {
+          "kind": "manifest-issue",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/issues/35"
+        },
+        {
+          "kind": "manifest-issue",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/issues/13"
+        },
+        {
+          "kind": "manifest-issue-comment",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/issues/29#issuecomment-5432443636"
+        },
+        {
+          "kind": "manifest-issue-comment",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/issues/28#issuecomment-5631153150"
+        },
+        {
+          "kind": "manifest-issue-comment",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/issues/27#issuecomment-5631152583"
+        },
+        {
+          "kind": "manifest-issue-comment",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/issues/26#issuecomment-5631151836"
+        },
+        {
+          "kind": "manifest-issue-comment",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/issues/15#issuecomment-5364904788"
+        },
+        {
+          "kind": "manifest-issue-comment",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/issues/13#issuecomment-5631150876"
+        }
+      ],
+      "license_entry_files": [
+        "LICENSE",
+        "README.md"
+      ],
+      "license_rule": "source-side-notices-retained"
+    },
+    {
+      "name": "saitoomituru/fold-nic",
+      "path": "sources/saitoomituru/fold-nic",
+      "url": "https://github.com/saitoomituru/fold-nic.git",
+      "branch": "main",
+      "revision": "44b5d8bb7525d317def6501cc3a5f0951df2e1bc",
+      "discovered_from": [
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/README.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/note/narrative/doraemon-order-article-draft1.md"
+        },
+        {
+          "kind": "manifest-issue-comment",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/issues/28#issuecomment-5435452712"
+        }
+      ],
+      "license_entry_files": [
+        "LICENSE",
+        "README.md"
+      ],
+      "license_rule": "source-side-notices-retained"
+    },
+    {
+      "name": "saitoomituru/IBD",
+      "path": "sources/saitoomituru/IBD",
+      "url": "https://github.com/saitoomituru/IBD.git",
+      "branch": "main",
+      "revision": "4e2d02b16854fbdf6cec9362ec612c33d92dd0ef",
+      "discovered_from": [
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/README.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/note/20260718-0850__IBD_責務検討_情報子クラスターと合成FAMブレストノート.ja.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/theory/ibd-fam-native-binder.ja.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/operations/workspace-registry.json"
+        },
+        {
+          "kind": "manifest-issue",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/issues/41"
+        }
+      ],
+      "license_entry_files": [
+        "LICENSE",
+        "README.md"
+      ],
+      "license_rule": "source-side-notices-retained"
+    },
+    {
+      "name": "saitoomituru/DVE800",
+      "path": "sources/saitoomituru/DVE800",
+      "url": "https://github.com/saitoomituru/DVE800.git",
+      "branch": "main",
+      "revision": "dd705e1f355572c491f1250974bd15026ce5bbf2",
+      "discovered_from": [
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/README.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/projects/dve800.ja.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/projects/800-series.ja.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/operations/workspace-registry.json"
+        }
+      ],
+      "license_entry_files": [
+        "LICENSE",
+        "README.md"
+      ],
+      "license_rule": "source-side-notices-retained"
+    },
+    {
+      "name": "saitoomituru/FAN800",
+      "path": "sources/saitoomituru/FAN800",
+      "url": "https://github.com/saitoomituru/FAN800.git",
+      "branch": "main",
+      "revision": "053d68a14981c8abf864b370ced04772598ab08f",
+      "discovered_from": [
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/operations/workspace-registry.json"
+        }
+      ],
+      "license_entry_files": [
+        "LICENSE",
+        "README.md"
+      ],
+      "license_rule": "source-side-notices-retained"
+    },
+    {
+      "name": "saitoomituru/SAO800",
+      "path": "sources/saitoomituru/SAO800",
+      "url": "https://github.com/saitoomituru/SAO800.git",
+      "branch": "main",
+      "revision": "14797473e2c4835525a28e8d07d0b5b7cf1c3fe0",
+      "discovered_from": [
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/projects/dve800.ja.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/operations/workspace-registry.json"
+        }
+      ],
+      "license_entry_files": [
+        "LICENSE",
+        "README.md"
+      ],
+      "license_rule": "source-side-notices-retained"
+    },
+    {
+      "name": "saitoomituru/PSYCHO-Py800MCP",
+      "path": "sources/saitoomituru/PSYCHO-Py800MCP",
+      "url": "https://github.com/saitoomituru/PSYCHO-Py800MCP.git",
+      "branch": "main",
+      "revision": "54cb3f94c755ce43c3b8e8f852f5acfadebedb5e",
+      "discovered_from": [
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/README.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/philosophy/chikuwa-cannon-prospective-meta-safety.ja.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/philosophy/chikuwa-cannon-prospective-meta-safety.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/projects/dve800.ja.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/projects/800-series.ja.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/projects/800-series.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/operations/workspace-registry.json"
+        }
+      ],
+      "license_entry_files": [
+        "LICENSE",
+        "README.md"
+      ],
+      "license_rule": "source-side-notices-retained"
+    },
+    {
+      "name": "saitoomituru/SphereASTRO",
+      "path": "sources/saitoomituru/SphereASTRO",
+      "url": "https://github.com/saitoomituru/SphereASTRO.git",
+      "branch": "main",
+      "revision": "6ed62aa0a6fa27e778033e7a2340e8e02298c2f3",
+      "discovered_from": [
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/README.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/projects/astro-aae-development-milestones.ja.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/operations/workspace-registry.json"
+        }
+      ],
+      "license_entry_files": [
+        "LICENSE",
+        "README.md"
+      ],
+      "license_rule": "source-side-notices-retained"
+    },
+    {
+      "name": "saitoomituru/commonsATX",
+      "path": "sources/saitoomituru/commonsATX",
+      "url": "https://github.com/saitoomituru/commonsATX.git",
+      "branch": "main",
+      "revision": "6773ccd02fa20c2e45aebc14cd2ec9b1aca8b107",
+      "discovered_from": [
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/README.md"
+        }
+      ],
+      "license_entry_files": [
+        "LICENSE",
+        "README.md"
+      ],
+      "license_rule": "source-side-notices-retained"
+    },
+    {
+      "name": "HIPSTAR-IScompany/astro.quantaril.cloud",
+      "path": "sources/HIPSTAR-IScompany/astro.quantaril.cloud",
+      "url": "https://github.com/HIPSTAR-IScompany/astro.quantaril.cloud.git",
+      "branch": "main",
+      "revision": "5158caec172b4893c837dbce036788343e0fd484",
+      "discovered_from": [
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/note/20260207-1643__sphere_astro_readme.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/theory/aqc.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/theory/fam-overview.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/theory/infoton-engineering.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/theory/sphere-os.ja.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/theory/fam-execution.ja.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/theory/aqc.ja.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/theory/sphere-os.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/theory/fam-execution.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/theory/fam-overview.ja.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/theory/infoton-engineering.ja.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/operations/workspace-registry.json"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/preservation/quantaril-domain-status.ja.md"
+        }
+      ],
+      "license_entry_files": [
+        "LICENSE",
+        "README.md"
+      ],
+      "license_rule": "source-side-notices-retained"
+    },
+    {
+      "name": "saitoomituru/pain-scouter-assessment",
+      "path": "sources/saitoomituru/pain-scouter-assessment",
+      "url": "https://github.com/saitoomituru/pain-scouter-assessment.git",
+      "branch": "main",
+      "revision": "4c6d21f751e0e05877a40060022ac4cbcff7dd6d",
+      "discovered_from": [
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/operations/workspace-registry.json"
+        }
+      ],
+      "license_entry_files": [
+        "LICENSE",
+        "README.md"
+      ],
+      "license_rule": "source-side-notices-retained"
+    },
+    {
+      "name": "saitoomituru/OpenSourcePITETO",
+      "path": "sources/saitoomituru/OpenSourcePITETO",
+      "url": "https://github.com/saitoomituru/OpenSourcePITETO.git",
+      "branch": "main",
+      "revision": "baea1ba33bbaa15c49307924794b9a0d81fa1c53",
+      "discovered_from": [
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/projects/neet-kitchen-alchemist.ja.md"
+        },
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/operations/workspace-registry.json"
+        }
+      ],
+      "license_entry_files": [
+        "LICENSE",
+        "README.md",
+        "README.us-en.md"
+      ],
+      "license_rule": "source-side-notices-retained"
+    },
+    {
+      "name": "HIPSTAR-IScompany/FMS24GTP_driver",
+      "path": "sources/HIPSTAR-IScompany/FMS24GTP_driver",
+      "url": "https://github.com/HIPSTAR-IScompany/FMS24GTP_driver.git",
+      "branch": "main",
+      "revision": "93cac41555269048dcced7f7a549735f2d1e5705",
+      "discovered_from": [
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/projects/fms24gtp-driver.md"
+        }
+      ],
+      "license_entry_files": [
+        "LICENSE",
+        "README.md"
+      ],
+      "license_rule": "source-side-notices-retained"
+    },
+    {
+      "name": "saitoomituru/saitoomituru",
+      "path": "sources/saitoomituru/saitoomituru",
+      "url": "https://github.com/saitoomituru/saitoomituru.git",
+      "branch": "main",
+      "revision": "203b2049923f72ce1a35c84762e80018015d6007",
+      "discovered_from": [
+        {
+          "kind": "manifest-file",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/e5fc0be592d7216b2e7bd059a4518db73a2a118e/docs/operations/workspace-registry.json"
+        }
+      ],
+      "license_entry_files": [
+        "LICENSE",
+        "README.md"
+      ],
+      "license_rule": "source-side-notices-retained"
+    },
+    {
+      "name": "saitoomituru/KUMA800",
+      "path": "sources/saitoomituru/KUMA800",
+      "url": "https://github.com/saitoomituru/KUMA800.git",
+      "branch": "main",
+      "revision": "edf56b3fef1a81ecbd06673f2dc50ed9f112faf0",
+      "discovered_from": [
+        {
+          "kind": "manifest-issue-comment",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/issues/10#issuecomment-5235100004"
+        },
+        {
+          "kind": "manifest-issue-comment",
+          "url": "https://github.com/saitoomituru/ZeroRoomLab-manifest/issues/10#issuecomment-5250893487"
+        }
+      ],
+      "license_entry_files": [
+        "LICENSE",
+        "README.md"
+      ],
+      "license_rule": "source-side-notices-retained"
+    },
+    {
+      "name": "HIPSTAR-IScompany/SphereOS-synthesizer",
+      "path": "sources/HIPSTAR-IScompany/SphereOS-synthesizer",
+      "url": "https://github.com/HIPSTAR-IScompany/SphereOS-synthesizer.git",
+      "branch": "main",
+      "revision": "c6b7248b99553e352b42ac3b3589b819a76985ca",
+      "discovered_from": [
+        {
+          "kind": "related-readme",
+          "url": "https://github.com/saitoomituru/PSYCHO-Py800MCP/blob/54cb3f94c755ce43c3b8e8f852f5acfadebedb5e/README.md"
+        }
+      ],
+      "license_entry_files": [
+        "README.md"
+      ],
+      "license_rule": "source-side-notices-retained"
+    }
+  ]
+}
