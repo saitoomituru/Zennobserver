@@ -1,0 +1,6 @@
+[submodule ".vendor/ZeroRoomLab-manifest"]
+	path = .vendor/ZeroRoomLab-manifest
+	url = https://github.com/saitoomituru/ZeroRoomLab-manifest.git
+[submodule ".vendor/SphereOS-Atlantis"]
+	path = .vendor/SphereOS-Atlantis
+	url = https://github.com/saitoomituru/SphereOS-Atlantis.git
