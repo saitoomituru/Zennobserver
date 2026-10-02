@@ -4,3 +4,23 @@
 [submodule ".vendor/SphereOS-Atlantis"]
 	path = .vendor/SphereOS-Atlantis
 	url = https://github.com/saitoomituru/SphereOS-Atlantis.git
+[submodule "sources/saitoomituru/FQuery"]
+	path = sources/saitoomituru/FQuery
+	url = https://github.com/saitoomituru/FQuery.git
+	shallow = true
+[submodule "sources/saitoomituru/Sphere-aae"]
+	path = sources/saitoomituru/Sphere-aae
+	url = https://github.com/saitoomituru/Sphere-aae.git
+	shallow = true
+[submodule "sources/saitoomituru/OpenRVC"]
+	path = sources/saitoomituru/OpenRVC
+	url = https://github.com/saitoomituru/OpenRVC.git
+	shallow = true
+[submodule "sources/saitoomituru/OND800"]
+	path = sources/saitoomituru/OND800
+	url = https://github.com/saitoomituru/OND800.git
+	shallow = true
+[submodule "sources/HIPSTAR-IScompany/quantaril_cloud_QAtlantis"]
+	path = sources/HIPSTAR-IScompany/quantaril_cloud_QAtlantis
+	url = https://github.com/HIPSTAR-IScompany/quantaril_cloud_QAtlantis.git
+	shallow = true
