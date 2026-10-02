@@ -24,3 +24,31 @@
 	path = sources/HIPSTAR-IScompany/quantaril_cloud_QAtlantis
 	url = https://github.com/HIPSTAR-IScompany/quantaril_cloud_QAtlantis.git
 	shallow = true
+[submodule "sources/saitoomituru/fold-nic"]
+	path = sources/saitoomituru/fold-nic
+	url = https://github.com/saitoomituru/fold-nic.git
+	shallow = true
+[submodule "sources/saitoomituru/IBD"]
+	path = sources/saitoomituru/IBD
+	url = https://github.com/saitoomituru/IBD.git
+	shallow = true
+[submodule "sources/saitoomituru/DVE800"]
+	path = sources/saitoomituru/DVE800
+	url = https://github.com/saitoomituru/DVE800.git
+	shallow = true
+[submodule "sources/saitoomituru/FAN800"]
+	path = sources/saitoomituru/FAN800
+	url = https://github.com/saitoomituru/FAN800.git
+	shallow = true
+[submodule "sources/saitoomituru/SAO800"]
+	path = sources/saitoomituru/SAO800
+	url = https://github.com/saitoomituru/SAO800.git
+	shallow = true
+[submodule "sources/saitoomituru/PSYCHO-Py800MCP"]
+	path = sources/saitoomituru/PSYCHO-Py800MCP
+	url = https://github.com/saitoomituru/PSYCHO-Py800MCP.git
+	shallow = true
+[submodule "sources/saitoomituru/SphereASTRO"]
+	path = sources/saitoomituru/SphereASTRO
+	url = https://github.com/saitoomituru/SphereASTRO.git
+	shallow = true
