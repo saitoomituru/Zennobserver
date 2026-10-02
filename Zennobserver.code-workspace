@@ -1,0 +1,7 @@
+{
+  "folders": [
+    { "name": "Zennobserver", "path": "." },
+    { "name": "ZeroRoomLab-manifest", "path": ".vendor/ZeroRoomLab-manifest" },
+    { "name": "SphereOS-Atlantis", "path": ".vendor/SphereOS-Atlantis" }
+  ]
+}
