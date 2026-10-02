@@ -1,0 +1,2 @@
+# Zennobserver
+ふさもふを観測してZennにデプロイするリポジトリ
