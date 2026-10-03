@@ -1,0 +1,13 @@
+{
+  "collected_at": "2026-10-03T01:12:03.451786+00:00",
+  "id": "3a476c3d82c20c740ec92a4e2bb947b1853576129ad1a30dc35b29d73a32f3a9",
+  "kind": "github-issue",
+  "payloads": {
+    "issue.json": "f29b21e584a5d3f7a64b3659fef78f2d0b16ffb17343133d3a7752b7e847649a"
+  },
+  "source": {
+    "repository": "saitoomituru/SphereOS-Atlantis",
+    "url": "https://github.com/saitoomituru/SphereOS-Atlantis/issues/24"
+  },
+  "source_license": "source-side-notices-retained"
+}
