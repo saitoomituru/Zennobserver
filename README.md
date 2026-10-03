@@ -17,6 +17,8 @@ Manifestを共有文脈、SphereDOSを開発足場として埋め込みます。
 | `scripts/` | 原稿検証とSphereDOSへの薄い接続 |
 | `.vendor/ZeroRoomLab-manifest/` | 明示Manifestの固定revision |
 | `.vendor/SphereOS-Atlantis/` | SphereDOSの固定revision |
+| `sources/<owner>/<repository>/` | 記事素材として追加した公開リポのサブモジュール |
+| `sources/catalog.json` | 取得revision・参照根拠・ライセンス表示場所の台帳 |
 | `.github/workflows/` | 原稿検証CI |
 | `docs/` | 構築記録と次段階の未決定事項 |
 
@@ -36,7 +38,9 @@ python3 scripts/sphere-dos.py status
 
 `git submodule update --init`は親リポに記録されたコミットを再現します。
 現段階では`--remote`による自動追従や、Atlantisの`workspace init`による他component取得を行いません。
-Manifest内の`vendor/FQuery`・`vendor/IBD`も今回の取得対象に含めず、recursive初期化しません。
+`sources/`のトップレベルサブモジュールも同じコマンドで初期化します。
+各参照元の内部サブモジュールはrecursive初期化しません。Manifest内の`vendor/FQuery`・`vendor/IBD`も
+未初期化のままです。FQueryとIBDの資料は`sources/saitoomituru/`に独立して配置しています。
 
 SphereDOS wrapperはAtlantisの既存bootstrap・CLIへ委譲します。boot receiptは
 Atlantis側の無視対象`.atlantis/`へ保存されます。
@@ -82,7 +86,11 @@ Actionsはpush・PR・手動実行で`npm ci`、検証テスト、記事メタ�
 
 ## 今回の停止位置
 
-週次起動、サブモジュール自動更新、Docusaurus等の他リポ取得、差分分類、記事自動生成、
+公開リポの資料集合は[取得元一覧](docs/source-repositories.ja.md)に記録しています。
+これは記事素材の配置であり、Atlantis内部workspaceのcomponent登録や実装依存を追加するものではありません。
+大きな参照元は浅い履歴で取得し、LFS素材の実体取得・再帰的な依存取得・install・buildは行っていません。
+
+週次起動、サブモジュール自動更新、他リポの自動取得、差分分類、記事自動生成、
 未分類差分のIssue化、自動コミット・公開判断は実装していません。
 [次段階の未決定事項](docs/next-decisions.ja.md)を決める手前で停止します。
 
