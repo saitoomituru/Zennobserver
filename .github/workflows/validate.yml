@@ -28,6 +28,10 @@ jobs:
         with:
           node-version-file: .node-version
           cache: npm
+      - name: MAGI検査器の固定revisionを取得
+        env:
+          GIT_LFS_SKIP_SMUDGE: '1'
+        run: git submodule update --init --depth 1 -- .vendor/SphereOS-Atlantis .vendor/ZeroRoomLab-manifest
       - name: 固定した依存を再構築
         run: npm ci
       - name: 検証器と記事メタ情報を確認

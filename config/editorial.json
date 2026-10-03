@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "issue_repository": "saitoomituru/Zennobserver",
+  "catalog": "sources/catalog.json",
+  "control_sources": [
+    {"name": "saitoomituru/ZeroRoomLab-manifest", "path": ".vendor/ZeroRoomLab-manifest", "branch": "main"},
+    {"name": "saitoomituru/SphereOS-Atlantis", "path": ".vendor/SphereOS-Atlantis", "branch": "main"}
+  ],
+  "document_suffixes": [".md", ".mdx", ".rst", ".txt"],
+  "max_payload_bytes": 4194304,
+  "max_api_pages": 100,
+  "destinations": {
+    "neetrunner": {"instructions": "magazines/neetrunner/AGENTS.md", "output": "articles"},
+    "infoton-engineering": {"instructions": "magazines/infoton-engineering/AGENTS.md", "output": "articles"},
+    "lab-debugging": {"instructions": "books/lab-debugging/AGENTS.md", "output": "books/lab-debugging"}
+  }
+}
