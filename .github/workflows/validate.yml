@@ -36,3 +36,5 @@ jobs:
         run: npm ci
       - name: 検証器と記事メタ情報を確認
         run: npm run check
+      - name: 素材配置計画を副作用なしで確認
+        run: python3 scripts/editorial_router.py build --dry-run
