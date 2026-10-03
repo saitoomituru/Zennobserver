@@ -86,6 +86,22 @@ class EditorialTests(unittest.TestCase):
                 with self.editor.lock():
                     pass
 
+    def test_partial_issue_fetch_keeps_body_and_received_comments(self):
+        module.write_json(self.root / "sources/catalog.json", {"repositories": []})
+        url = "https://github.com/saitoomituru/SphereOS-Atlantis/issues/24"
+        self.api.request = lambda path: {"html_url": url, "title": "原本", "body": "本文"}
+        def comments(path):
+            yield {"html_url": url + "#issuecomment-1", "body": "取得済み"}
+            raise module.EditorialError("次ページの取得失敗")
+        self.api.pages = comments
+        item, code = self.editor.fetch_issue(url)
+        self.assertEqual(code, 2)
+        path, _ = self.editor.item(item)
+        data = module.read_json(path / "issue.json")
+        self.assertEqual(data["issue"]["body"], "本文")
+        self.assertEqual(data["comments"][0]["body"], "取得済み")
+        self.assertEqual(module.read_json(path / "state.json")["status"], "blocked")
+
     def git(self, path, *args):
         return subprocess.check_output(["git", *args], cwd=path, stderr=subprocess.DEVNULL).decode().strip()
 
@@ -125,6 +141,27 @@ class EditorialTests(unittest.TestCase):
         self.assertEqual(metadata["source"]["before"], old)
         self.assertEqual(metadata["source"]["after"], new)
         self.assertEqual(editor.collect()[0], ids)
+        # fetch済みの新revisionを模擬し、INBOX保存がcheckoutより先であることを確認する。
+        self.git(source, "checkout", "--detach", old)
+        self.git(source, "fetch", ".", new)
+        real_git = editor.git
+        events = []
+        real_save = editor.save
+        def save(*args, **kwargs):
+            result = real_save(*args, **kwargs)
+            events.append("saved")
+            return result
+        def git(path, *args):
+            if args[0] == "fetch":
+                return b""
+            if args[0] == "checkout":
+                self.assertIn("saved", events)
+                events.append("checkout")
+            return real_git(path, *args)
+        with patch.object(editor, "git", side_effect=git), patch.object(editor, "save", side_effect=save):
+            self.assertEqual(editor.collect(update=True), (ids, 0))
+        self.assertEqual(events, ["saved", "checkout"])
+        self.assertEqual(self.git(source, "rev-parse", "HEAD"), new)
         (source / "new.md").write_text("unsaved\n")
         ids, code = editor.collect()
         self.assertEqual(code, 2)

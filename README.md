@@ -4,16 +4,20 @@
 
 ZeroRoomLabのドキュメント、コード、実験ログを、元資料へ辿れる記事に育てる編集・配信母艦です。
 Manifestを共有文脈、SphereDOSを開発足場として埋め込みます。
-今回の実装は原稿の作成・検証・プレビューとZenn GitHub連携の土台まで。
+原稿の作成・検証・プレビューに加え、資料回収・MAGI監査・振分・例外IssueのToolセットを備えています。
 記事・Bookの分け方は[編集メタルール](docs/editorial-rules.ja.md)に記録しています。
-資料の自動収集・記事生成・週次運用のルールは、次の段階で決めます。
+更新の入口は[日本語の更新指示](agents/UPDATE.md)、コマンドと停止条件は[Tool索引](docs/editorial-tools.ja.md)です。
 
 ## 構成
 
 | パス | 役割 |
 |---|---|
 | `articles/` | Zenn記事のMarkdown（現在は記事未作成） |
-| `books/` | Zenn本の配置先（現在は本未作成） |
+| `books/` | Zenn本の配置先（lab-debuggingは非公開の空の編集骨格） |
+| `magazines/` | マガジン別の差分指示・記事索引（本文はarticlesへ） |
+| `agents/` | 回収・監査・振分・執筆の段階別指示 |
+| `INBOX/` | 文書差分・Issue原本・振分と例外の状態票 |
+| `foldlog/` | 更新操作とMAGI監査の記録 |
 | `templates/` | 公開対象外の原稿テンプレート |
 | `scripts/` | 原稿検証とSphereDOSへの薄い接続 |
 | `.vendor/ZeroRoomLab-manifest/` | 明示Manifestの固定revision |
@@ -38,7 +42,8 @@ python3 scripts/sphere-dos.py status
 ```
 
 `git submodule update --init`は親リポに記録されたコミットを再現します。
-現段階では`--remote`による自動追従や、Atlantisの`workspace init`による他component取得を行いません。
+更新には`python3 scripts/editorial.py collect --update`を使い、差分を保存してから登録先のrevisionを進めます。
+Atlantisの`workspace init`による他component取得は行いません。
 `sources/`のトップレベルサブモジュールも同じコマンドで初期化します。
 各参照元の内部サブモジュールはrecursive初期化しません。Manifest内の`vendor/FQuery`・`vendor/IBD`も
 未初期化のままです。FQueryとIBDの資料は`sources/saitoomituru/`に独立して配置しています。
@@ -67,8 +72,8 @@ Zennのslugは小文字英数字・`-`・`_`からなる12〜50文字です。�
 
 ## Zennへの配信
 
-Zenn側の「GitHubからのデプロイ」で、**`saitoomituru/Zennobserver`の`main`**を連携します。
-これはZennアカウント側の設定です。本リポの初期化だけでは連携済みと判定しません。
+2026-10-03のユーザー提示画面で、Zenn側と**`saitoomituru/Zennobserver`の`main`**の連携を確認しました。
+配信にはこの既存のZenn公式連携を使います。
 
 連携後は`articles/*.md`を`main`へpushするとZennが同期します。
 `published: false`は下書き、`true`は公開対象です。Zenn CLIはプレビュー・原稿作成用で、
@@ -85,15 +90,18 @@ Actionsはpush・PR・手動実行で`npm ci`、検証テスト、記事メタ�
 - [Zenn CLIの導入](https://zenn.dev/zenn/articles/install-zenn-cli)
 - [記事・本の管理方法](https://zenn.dev/zenn/articles/zenn-cli-guide)
 
-## 今回の停止位置
+## 更新と編集の実行
 
 公開リポの資料集合は[取得元一覧](docs/source-repositories.ja.md)に記録しています。
 これは記事素材の配置であり、Atlantis内部workspaceのcomponent登録や実装依存を追加するものではありません。
 大きな参照元は浅い履歴で取得し、LFS素材の実体取得・再帰的な依存取得・install・buildは行っていません。
 
-週次起動、サブモジュール自動更新、他リポの自動取得、差分分類、記事自動生成、
-未分類差分のIssue化、自動コミット・公開判断は実装していません。
-[次段階の未決定事項](docs/next-decisions.ja.md)を決める手前で停止します。
+登録先の更新と差分回収、明示Issueの本文・コメント取得、MAGI receipt検査、編集先の割当をToolで実行します。
+初回はManifest・SphereDOS・MAGI Skillを読み、各段階と出力先の日本語AGENTSへ分岐します。
+判定不能は資料をINBOXに保持したままZennobserverへIssueを起票し終了します。投稿失敗も未送信票を保持します。
+
+原稿の判断・執筆はエージェントが担当し、新規原稿は下書きで開始します。週次scheduler、無人runner、
+自動公開は設定していません。[次段階の未決定事項](docs/next-decisions.ja.md)に残りの運用選択を記録しています。
 
 読者需要・記事の粒度・初回の題材・導線・計測は
 [Zennマーケティング計画案](docs/zenn-marketing-plan.ja.md)にまとめています。

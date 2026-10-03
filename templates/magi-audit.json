@@ -1,0 +1,32 @@
+{
+  "item_id": "INBOXのIDへ置換",
+  "payloads": {},
+  "destination": "振分先IDへ置換",
+  "source_revisions": {"atlantis": "現在revision", "manifest": "現在revision"},
+  "observer": "",
+  "declared_position": "",
+  "position_talk_risk": "",
+  "claim_scope": "",
+  "ruler_provenance": "",
+  "positions": {
+    "maxwell": {"gate": "observe", "finding": ""},
+    "uriel": {"gate": "observe", "finding": ""},
+    "raphael": {"gate": "observe", "finding": ""}
+  },
+  "action_gate": "observe",
+  "unresolved": ["未監査"],
+  "disagreements": [],
+  "human_confirmation_required": [],
+  "temporal": {
+    "version": "0.2.1",
+    "observation_mode": "current-interpretation-of-history",
+    "observed_at": "現在の監査時刻へ置換",
+    "historical_oae_status": "historical-oae-unavailable",
+    "historical_oae_ref": null,
+    "historical_role_attribution": "none",
+    "retroactive_backfill": false,
+    "same_worldline_mutation": false,
+    "claims_physical_time_travel": false,
+    "last_order": {"code": "OAE-HISTORY-UNKNOWN", "action": "stop-retroactive-backfill"}
+  }
+}

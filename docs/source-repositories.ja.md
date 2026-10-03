@@ -40,4 +40,4 @@
 - 内部サブモジュールの再帰取得、LFS payloadの明示取得、依存install、build、モデル・実機テストは行っていません。
 - 配置成功は各componentの動作確認やライセンスの再許諾を意味しません。参照元のlicense・著者表示を保持しています。
 - Zennobserverの開発workspace descriptorは従来の3メンバーを維持しています。この台帳は記事資料集合であり、別の開発workspaceや実装依存を作る宣言ではありません。
-- 自動追従、定時fetch、記事生成、分類、Issue起票、公開判断の運用は引き続き未実装です。
+- 登録先の更新・差分回収・振分と例外Issueは[編集Toolセット](editorial-tools.ja.md)に実装しました。定時起動と自動公開は未設定です。
