@@ -9,7 +9,8 @@ rootのAGENTSを最初に読み、以後のファイルは共通指示の全文�
 2. `.vendor/ZeroRoomLab-manifest/AGENTS.md`と必要な運用正本を読む。
 3. `.vendor/SphereOS-Atlantis/AGENTS.md`、`SPHERE-DOS.ja.md`を読む。
 4. `python3 scripts/editorial.py magi-context`を実行し、返されたbundle・定規・三Position Skillを読む。
-5. `docs/editorial-rules.ja.md`、`docs/editorial-tools.ja.md`を読む。
+5. `docs/editorial-rules.ja.md`、`docs/editorial-tools.ja.md`、`docs/editorial-action-server.ja.md`を読む。
+6. `python3 scripts/editorial_router.py ctl stats`で状態だけを確認し、必要な素材だけを読む。
 
 ## 段階的な指示分岐
 
@@ -26,5 +27,6 @@ GitHub connectorを使う場合も同じ状態票を使う。CLIの例外Issue�
 投稿自体が不可能なら未送信の事実と票の場所を報告する。Issue URLを捏造しない。
 
 実行が問題なく完了した段階ごとに、日本語で小さくcommitしremoteへpushする。
+素材の実パス移動と索引手編集は行わない。JSON-LDの遷移宣言後、routerのdry-runで契約を確認する。
 上流リポのcode・Issueへ変更を送る権限は、この更新指示から導出しない。
 週次日時、利用モデル、token予算、無人実行runnerはこの指示から推定しない。

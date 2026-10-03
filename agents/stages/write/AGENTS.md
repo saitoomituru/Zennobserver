@@ -11,8 +11,13 @@
 5. 執筆後の主張もMAGI三Positionで再確認し、引用・結論と元資料の対応を`foldlog/`へ残す。
    内容を変えたら、資料振分時の監査だけで本文も合格したと表示しない。
 6. `npm run check`とZenn CLIのプレビューを行う。Bookは設定・章順・表紙も確認する。
-7. 問題がなければ原稿・関連receiptを日本語でcommitしpushする。公開指示がある原稿だけ公開状態へ進める。
+7. `templates/article-sources.jsonld`から`articles/<slug>.sources.jsonld`を作り、使用素材URNを記録する。
+   各素材MDXにも同じ記事URN、`archive`、`archiveMonth`、`complete: true`を記録する。
+8. `python3 scripts/editorial_router.py build --dry-run`で相互参照と移動計画を確認する。
+   素材を手動移動せず、原稿・宣言・関連receiptを日本語でcommitしpushする。
+   公開指示がある原稿だけ公開状態へ進める。
 
 ZennobserverのmainはZennと連携済み（2026-10-03の本人提示画面）。pushは同期を起動する。
 CIは同期を止めるgateではないため、公開フラグを変更する前に検証する。
 判定不能なら原稿もINBOXの参照も保持し、元資料IDについて`block`して終了する。
+新形式素材では`editorial:transition: unresolved`と具体的理由を記録し、archive宣言を付けない。

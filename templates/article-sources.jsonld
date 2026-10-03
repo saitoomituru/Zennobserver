@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "editorial": "https://zeroroomlab.dev/ns/editorial#"
+  },
+  "@id": "urn:zennobserver:article:ZENN_SLUG",
+  "@type": "editorial:ZennArticle",
+  "editorial:usesMaterial": [
+    "urn:zennobserver:material:64桁のSHA256"
+  ]
+}

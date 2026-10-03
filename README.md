@@ -17,6 +17,8 @@ Manifestを共有文脈、SphereDOSを開発足場として埋め込みます。
 | `magazines/` | マガジン別の差分指示・記事索引（本文はarticlesへ） |
 | `agents/` | 回収・監査・振分・執筆の段階別指示 |
 | `INBOX/` | 文書差分・Issue原本・振分と例外の状態票 |
+| `OUTLINES/` | 複数素材を束ねた記事アウトラインと機械生成索引 |
+| `BACKNUMBERS/` | 記事化済み素材MDX。将来の探索にも再利用する |
 | `foldlog/` | 更新操作とMAGI監査の記録 |
 | `templates/` | 公開対象外の原稿テンプレート |
 | `scripts/` | 原稿検証とSphereDOSへの薄い接続 |
@@ -102,6 +104,17 @@ Actionsはpush・PR・手動実行で`npm ci`、検証テスト、記事メタ�
 
 原稿の判断・執筆はエージェントが担当し、新規原稿は下書きで開始します。週次scheduler、無人runner、
 自動公開は設定していません。[次段階の未決定事項](docs/next-decisions.ja.md)に残りの運用選択を記録しています。
+
+素材の残留確認と配置は本文をLLMへ再読込せず実行できます。
+
+```bash
+python3 scripts/editorial_router.py ctl stats
+python3 scripts/editorial_router.py ctl unarticleized
+python3 scripts/editorial_router.py build --dry-run
+```
+
+素材MDXのJSON-LDへ遷移を宣言すると、main上のActionサーバーが相互参照を検証し、
+BACKNUMBERSへの移動と索引再生成だけを行います。Action内でLLMは起動しません。
 
 読者需要・記事の粒度・初回の題材・導線・計測は
 [Zennマーケティング計画案](docs/zenn-marketing-plan.ja.md)にまとめています。

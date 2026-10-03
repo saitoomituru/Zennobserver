@@ -19,6 +19,19 @@ Python 3.11以上の標準ライブラリーで動作する。初回にrootのAG
 `route`は編集先の割当までで、原稿の生成・移動・公開を行わない。原本は割当後もINBOXに残す。
 振分先の指示は`config/editorial.json`から辿る。Zenn記事の本文は`articles/`へ出力する。
 
+上表は取得・MAGI監査を行うlegacy Toolである。JSON-LD素材の配置は別の決定論的Toolを使う。
+
+| コマンド | 入力→出力 | 副作用 |
+|---|---|---|
+| `editorial_router.py build --dry-run` | JSON-LD→検証済み移動計画 | なし |
+| `editorial_router.py build` | JSON-LD→folder配置・NDJSON索引 | 許可root内の素材folder移動と索引更新 |
+| `editorial_router.py reindex` | metadata→NDJSON索引 | 索引だけ再生成 |
+| `editorial_router.py reindex --check` | metadataと索引の比較 | なし。不一致で終了2 |
+| `editorial_router.py ctl QUERY` | NDJSON索引→小さなJSON | なし。本文を読まない |
+
+`QUERY`: `pending` / `unarticleized` / `unresolved` / `archived` / `stats`。
+詳細は[Actionサーバー契約](editorial-action-server.ja.md)を参照する。
+
 ## 更新の実行
 
 ```bash
