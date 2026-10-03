@@ -28,6 +28,8 @@ source resolverの成功を、記事の意味監査・分類・公開判断の�
 今回追加を指示された公開リポは`sources/catalog.json`に記録し、固定revisionで保持します。
 取得元一覧は資料集合であり、全リポへの変更権限や実装依存の宣言ではありません。
 Toolの入出力と終了条件は[編集Tool索引](docs/editorial-tools.ja.md)を参照します。
+素材MDXの配置は[Actionサーバー契約](docs/editorial-action-server.ja.md)に従います。
+エージェントはJSON-LDへ意味判断の結果だけを宣言し、実パスの組立・移動・索引生成を行いません。
 判定不能例外はINBOXを保持しZennobserverへIssueを起票して終了します。送信失敗は未送信票を保持します。
 週次scheduler、未登録リポの自動取得、利用モデル・予算、無人の本文生成runner、公開フラグの自動決定は追加していません。
 思想・信仰・構想と、実装・観測・追試のレジスターを無断で相互置換しません。

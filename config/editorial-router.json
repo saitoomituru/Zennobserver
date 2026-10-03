@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "material_fence": "jsonld zennobserver-material",
+  "material_root": "INBOX/materials",
+  "legacy_root": "INBOX/items",
+  "backnumber_root": "BACKNUMBERS",
+  "outline_root": "OUTLINES",
+  "article_root": "articles",
+  "indexes": {
+    "inbox": "INBOX/index.ndjson",
+    "backnumbers": "BACKNUMBERS/index.ndjson",
+    "outlines": "OUTLINES/index.ndjson"
+  },
+  "transitions": ["hold", "archive", "unresolved"]
+}
