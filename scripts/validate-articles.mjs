@@ -33,6 +33,14 @@ export async function validateArticles(root) {
   const results = [];
   for (const file of files.sort((a, b) => a.name.localeCompare(b.name))) {
     if (file.name.startsWith('.')) continue;
+    // Editorial provenance sidecars are not Zenn articles; the router validates their JSON-LD and backlinks.
+    // Accept only the exact sibling naming convention, not arbitrary JSON-LD files or directories.
+    if (file.isFile() && file.name.endsWith('.sources.jsonld')) {
+      const slug = file.name.slice(0, -'.sources.jsonld'.length);
+      if (files.some(candidate => candidate.isFile() && candidate.name === `${slug}.md`)) continue;
+      results.push({ file: file.name, errors: [{ isCritical: true, message: '対応する.md記事がないsources sidecarです。' }] });
+      continue;
+    }
     if (!file.isFile() || !file.name.endsWith('.md')) {
       results.push({ file: file.name, errors: [{ isCritical: true, message: 'articles直下には.md記事を配置してください。' }] });
       continue;
