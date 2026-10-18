@@ -49,3 +49,25 @@ test('articles以外のvendor資料を読まず、空の初期構成も扱える
     await rm(root, { recursive: true, force: true });
   }
 });
+
+test('同名記事のsources.jsonld sidecarは記事数へ含めず、孤立sidecarは拒否する', async () => {
+  const root = await mkdtemp(join(tmpdir(), 'zennobserver-sidecar-test-'));
+  try {
+    await mkdir(join(root, 'articles'));
+    await writeFile(join(root, 'articles', 'example-article-001.md'), article);
+    await writeFile(join(root, 'articles', 'example-article-001.sources.jsonld'), '{"@context": {}}');
+    const valid = await validateArticles(root);
+    assert.equal(valid.length, 1);
+    assert.equal(valid[0].file, 'example-article-001.md');
+    assert.equal(critical(valid[0].errors), false);
+    await writeFile(join(root, 'articles', 'orphan-article-001.sources.jsonld'), '{"@context": {}}');
+    const invalid = await validateArticles(root);
+    assert.equal(invalid.length, 2);
+    assert.equal(invalid.some(result => result.file === 'orphan-article-001.sources.jsonld' && critical(result.errors)), true);
+    await writeFile(join(root, 'articles', 'arbitrary.json'), '{}');
+    const arbitrary = await validateArticles(root);
+    assert.equal(arbitrary.some(result => result.file === 'arbitrary.json' && critical(result.errors)), true);
+  } finally {
+    await rm(root, { recursive: true, force: true });
+  }
+});
